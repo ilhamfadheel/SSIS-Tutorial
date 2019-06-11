@@ -1,0 +1,3 @@
+Create a package that extracts data from a single flat file source. The data is then transformed using Lookup transformations. 
+Then, the package loads the data into a copy of the FactCurrencyRate fact table in the AdventureWorksDW2012 sample database.
+The .bak file for 'AdventureWorksDW2012' can be downloaded from https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-2017

@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Lesson 1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{5C4B1243-33C0-47C7-BBC0-51AAB75E0D5C}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{C98916D3-E28F-41CD-BEDC-5610DDADEBE1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -569,7 +569,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -619,14 +619,14 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                       refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyDate]"
                       cachedDataType="dbDate"
                       cachedName="CurrencyDate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
                       lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].Columns[CurrencyDate]" />
                     <inputColumn
                       refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyID]"
                       cachedDataType="wstr"
                       cachedLength="3"
                       cachedName="CurrencyID"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
                       lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].Columns[CurrencyID]" />
                   </inputColumns>
                   <externalMetadataColumns
