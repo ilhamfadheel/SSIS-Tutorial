@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SN0WTROOP3R"
   DTS:CreatorName="SN0WTROOP3R\Ilham_Fadhil"
-  DTS:DTSID="{31112B86-8312-4508-A6CB-5673AFC21B83}"
+  DTS:DTSID="{166D8EE8-2495-4F83-AEC2-DA32D0C3BF14}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.1300.371"
   DTS:LocaleID="4105"
-  DTS:ObjectName="Lesson 1"
+  DTS:ObjectName="1  Create Basik Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{C12EB10A-3DB0-4507-A409-F6DA97D19E8D}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{0FC4911A-54F6-4EEF-AD6A-5D1746E1FB94}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
