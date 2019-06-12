@@ -6,13 +6,14 @@
   DTS:CreatorComputerName="SN0WTROOP3R"
   DTS:CreatorName="SN0WTROOP3R\Ilham_Fadhil"
   DTS:DTSID="{02EF1721-6DF0-432B-9EFC-1A4E64C0CF4E}"
+  DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.1300.371"
   DTS:LocaleID="4105"
   DTS:ObjectName="5  Add Package Configuration for Deployment Model"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{29787D5B-7A74-4951-9621-73839C3DDC99}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{2E36D035-9C7E-45D4-8D16-70213BB88EA1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -158,6 +159,16 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0067ABF7-2579-474E-8A39-053AC96A9993}"
+      DTS:ObjectName="SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SN0WTROOP3R\SQLEXPRESS01;Initial Catalog=AdventureWorksDW2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[TutorialLog.log.txt]"
       DTS:CreationName="FILE"
       DTS:DTSID="{BD31376A-665E-4A7E-9D81-3DF772CE0AF7}"
@@ -169,6 +180,14 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\Users\Ilham Fadhil\source\repos\ilhamfadheel\SSIS-Tutorial\SSIS Tutorial\SSIS Tutorial.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{05CF3E8A-8D93-4182-9F81-CFBB9F896E9A}"
+      DTS:ObjectName="SSIS Tutorial Directory configuration" />
+  </DTS:Configurations>
   <DTS:LogProviders>
     <DTS:LogProvider
       DTS:ConfigString="TutorialLog.log.txt"
@@ -188,6 +207,16 @@
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9164E49B-A70B-40B2-8256-6FC5E022C6E8}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFolderName">
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
@@ -214,10 +243,12 @@
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
         DTS:DTSID="{7619787B-C8D6-41DE-B34E-8E79DACFB447}"
         DTS:ObjectName="{7619787B-C8D6-41DE-B34E-8E79DACFB447}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::varFolderName]</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="D:\Multipolar Internship\ETL Tutorial\Creating a Simple ETL Package\Sample Data" />
+              Folder="" />
             <FEFEProperty
               FileSpec="Currency_*.txt" />
             <FEFEProperty
@@ -1555,8 +1586,8 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Connections[OleDbConnection]"
-                      connectionManagerID="{0067ABF7-2579-474E-8A39-053AC96A9993}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+                      connectionManagerID="Package.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+                      connectionManagerRefId="Package.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -1714,8 +1745,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Connections[OleDbConnection]"
-                      connectionManagerID="{0067ABF7-2579-474E-8A39-053AC96A9993}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+                      connectionManagerID="Package.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+                      connectionManagerRefId="Package.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -1861,8 +1892,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{0067ABF7-2579-474E-8A39-053AC96A9993}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+                      connectionManagerID="Package.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+                      connectionManagerRefId="Package.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2002,8 +2033,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{4F0B2D58-8B92-4797-BE4A-7FED87F9D4FC}"
-          DTS:ObjectName="{4F0B2D58-8B92-4797-BE4A-7FED87F9D4FC}"
+          DTS:DTSID="{682123A5-C7C0-4F3D-A0D4-1C8022F5F605}"
+          DTS:ObjectName="{682123A5-C7C0-4F3D-A0D4-1C8022F5F605}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
@@ -2041,21 +2072,65 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description"
+          TopLeft="311.166662457089,103.999998140335" />
+        <NodeLayout
           Size="180,42.6666666666667"
           Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key"
           TopLeft="26.1666666666667,108.166666666667" />
         <NodeLayout
-          Size="160,42.6666666666667"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key"
-          TopLeft="36.1666666666667,210.833333333334" />
+          Size="136,42.6666666666667"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows"
+          TopLeft="314.416663382202,176.366663512985" />
+        <NodeLayout
+          Size="209.333333333334,42.6666666666667"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination"
+          TopLeft="11.5,313.5" />
         <NodeLayout
           Size="221.333333333334,42.6666666666667"
           Id="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data"
           TopLeft="5.5,5.50000000000004" />
         <NodeLayout
-          Size="209.333333333334,42.6666666666667"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination"
-          TopLeft="11.5,313.5" />
+          Size="160,42.6666666666667"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key"
+          TopLeft="36.1666666666667,210.833333333334" />
+        <EdgeLayout
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Output 0]"
+          TopLeft="400.499995790422,146.666664807002">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18.0833324082197,29.6999987059832"
+              Start="0,0"
+              End="-18.0833324082197,22.1999987059832">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.8499993529916" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.8499993529916"
+                    Point2="0,14.8499993529916"
+                    Point3="-4,14.8499993529916" />
+                  <mssgle:LineSegment
+                    End="-14.0833324082197,14.8499993529916" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.0833324082197,14.8499993529916"
+                    Point2="-18.0833324082197,14.8499993529916"
+                    Point3="-18.0833324082197,18.8499993529916" />
+                  <mssgle:LineSegment
+                    End="-18.0833324082197,22.1999987059832" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output1]"
           TopLeft="116.166666666667,253.5">
@@ -2105,32 +2180,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Flat File Source Output]"
-          TopLeft="116.166666666667,48.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="178.666666666667,42.6666666666667"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description"
-          TopLeft="311.166662457089,103.999998140335" />
-        <EdgeLayout
           Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Error Output]"
           TopLeft="206.166666666667,127.416665736834">
           <EdgeLayout.Curve>
@@ -2154,42 +2203,28 @@ where [refTable].[FullDateAlternateKey] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="136,42.6666666666667"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows"
-          TopLeft="314.416663382202,176.366663512985" />
         <EdgeLayout
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Output 0]"
-          TopLeft="400.499995790422,146.666664807002">
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Flat File Source Output]"
+          TopLeft="116.166666666667,48.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-18.0833324082197,29.6999987059832"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="-18.0833324082197,22.1999987059832">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.8499993529916" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.8499993529916"
-                    Point2="0,14.8499993529916"
-                    Point3="-4,14.8499993529916" />
-                  <mssgle:LineSegment
-                    End="-14.0833324082197,14.8499993529916" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14.0833324082197,14.8499993529916"
-                    Point2="-18.0833324082197,14.8499993529916"
-                    Point3="-18.0833324082197,18.8499993529916" />
-                  <mssgle:LineSegment
-                    End="-18.0833324082197,22.1999987059832" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
