@@ -13,7 +13,7 @@
   <DeploymentModelSpecificContent>
     <Manifest>
       <DTSPackages>
-        <DtsPackage FormatVersion="0">
+        <DtsPackage FormatVersion="8">
           <Name>1. Create Basik Package.dtsx</Name>
           <FullPath>1. Create Basik Package.dtsx</FullPath>
           <References />
@@ -23,17 +23,17 @@
           <FullPath>2. Add Looping.dtsx</FullPath>
           <References />
         </DtsPackage>
-        <DtsPackage FormatVersion="0">
+        <DtsPackage FormatVersion="8">
           <Name>3. Add Logging.dtsx</Name>
           <FullPath>3. Add Logging.dtsx</FullPath>
           <References />
         </DtsPackage>
-        <DtsPackage FormatVersion="0">
+        <DtsPackage FormatVersion="8">
           <Name>4. Add Error Flow.dtsx</Name>
           <FullPath>4. Add Error Flow.dtsx</FullPath>
           <References />
         </DtsPackage>
-        <DtsPackage FormatVersion="0">
+        <DtsPackage FormatVersion="8">
           <Name>5. Add Package Configuration for Deployment Model.dtsx</Name>
           <FullPath>5. Add Package Configuration for Deployment Model.dtsx</FullPath>
           <References />
@@ -53,13 +53,7 @@
         <ConnectionSecurityMappings />
         <DatabaseStorageLocations />
         <TargetServerVersion>SQLServer2017</TargetServerVersion>
-        <ParameterConfigurationValues>
-          <ConfigurationSetting>
-            <Id>LastModifiedTime</Id>
-            <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2019-06-11T05:11:28.8706082Z</Value>
-          </ConfigurationSetting>
-        </ParameterConfigurationValues>
+        <ParameterConfigurationValues />
       </Options>
     </Configuration>
   </Configurations>
