@@ -7,12 +7,12 @@
   DTS:CreatorName="SN0WTROOP3R\Ilham_Fadhil"
   DTS:DTSID="{44D0E86F-D57D-4F70-8784-F2775CD13FBC}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.1300.371"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
   DTS:LocaleID="4105"
   DTS:ObjectName="4  Add Error Flow"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{C7A07F02-A520-4C4F-BBBC-4EFF8A667C70}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{50DEA674-419B-48B1-83A3-A78DED32306D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1491,7 +1491,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT * FROM [dbo].[DimCurrency]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * FROM [dbo].[DimCurrency]
 WHERE [CurrencyAlternateKey]
 IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
     'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
@@ -1501,7 +1501,7 @@ IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT * FROM [dbo].[DimCurrency]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT * FROM [dbo].[DimCurrency]
 WHERE [CurrencyAlternateKey]
 IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
     'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
@@ -1555,8 +1555,8 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Connections[OleDbConnection]"
-                      connectionManagerID="{0067ABF7-2579-474E-8A39-053AC96A9993}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+                      connectionManagerID="{0067ABF7-2579-474E-8A39-053AC96A9993}:invalid"
+                      connectionManagerRefId="{0067ABF7-2579-474E-8A39-053AC96A9993}:invalid"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -1658,13 +1658,13 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DimDate]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DimDate]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
 where [refTable].[FullDateAlternateKey] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -1714,8 +1714,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Connections[OleDbConnection]"
-                      connectionManagerID="{0067ABF7-2579-474E-8A39-053AC96A9993}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+                      connectionManagerID="{0067ABF7-2579-474E-8A39-053AC96A9993}:invalid"
+                      connectionManagerRefId="{0067ABF7-2579-474E-8A39-053AC96A9993}:invalid"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -1827,7 +1827,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1861,8 +1861,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{0067ABF7-2579-474E-8A39-053AC96A9993}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[SN0WTROOP3R_SQLEXPRESS01.AdventureWorksDW2012]"
+                      connectionManagerID="{0067ABF7-2579-474E-8A39-053AC96A9993}:invalid"
+                      connectionManagerRefId="{0067ABF7-2579-474E-8A39-053AC96A9993}:invalid"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2008,6 +2008,17 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{9A2AB997-9411-4EAF-8261-3781FFA8D4F2}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables />
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2032,6 +2043,13 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           Size="232,169.333333333334"
           Id="Package\Foreach File in Folder"
           TopLeft="204.999996945262,105.59999894619" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205.333333333334,54.6666666666667"
+          Size="205.333333333334,98"
+          Id="Package\Sequence Container"
+          TopLeft="5.5,105.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2223,6 +2241,19 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key">
     <Properties>
       <Property>
@@ -2242,19 +2273,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
