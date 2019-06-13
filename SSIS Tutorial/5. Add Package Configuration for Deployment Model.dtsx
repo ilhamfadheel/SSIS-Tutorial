@@ -12,8 +12,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="5  Add Package Configuration for Deployment Model"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{2E36D035-9C7E-45D4-8D16-70213BB88EA1}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{7BEB0A55-B338-49B5-ADF5-262439A62B31}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2039,6 +2039,17 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{7FDAA1E0-4736-47B8-8E11-4E690D9DF65A}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables />
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2062,7 +2073,14 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           PanelSize="232,126.666666666667"
           Size="232,169.333333333334"
           Id="Package\Foreach File in Folder"
-          TopLeft="204.999996945262,105.59999894619" />
+          TopLeft="222.083330024034,105.59999894619" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205.333333333334,54.6666666666667"
+          Size="205.333333333334,98"
+          Id="Package\Sequence Container"
+          TopLeft="0.41666666045785,37.8999994653464" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
